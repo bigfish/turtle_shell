@@ -1,0 +1,1 @@
+var feedback=document.getElementById("feedback");var buffer=document.getElementById("turtle_buffer");function RUN(){var buftext=buffer.value;feedback.innerText="";try{eval(buftext)}catch(e){feedback.innerText=e.message}}INIT("canvas","#000000","#FFFF00");

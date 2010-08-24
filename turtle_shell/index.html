@@ -1,0 +1,59 @@
+<html><head><title>Turtle Graphics Explorer</title><style>body{font-family:Verdana,Helvetica,Arial;padding:0;margin:0} #instructions{padding-left:.5em;font-size:.8em} #feedback{color:red;margin:0;padding:0;font-size:.6em} #title{display:inline;font-size: 16px; margin: 5px 0 5px 5px} #subtitle{display:inline;font-size: 12px} #turtle_buffer{display:box;font-family:Verdana,Helvetica,Arial;width:98%;height:99%;margin:5px;padding:1%} input[type=button]{margin-left:5px}</style><script src="js/turtle_global.js" ></script><script src="js/global_procedures.js" ></script></head><body bgcolor="white"><table style="margin:0;padding:0" width="100%" height="100%" cellpadding="0" cellspacing="0"><tr><td width="600" height="600" valign="top"><canvas id="canvas" width="600" height="600">Your browser does not support canvas, please upgrade.</canvas></td><td valign="top"> <h3 id="title">Turtle Shell:</h3> <h4 id="subtitle"> a turtle graphics explorer.</h4> <form style="width: 100%; height: 90%;"><textarea id="turtle_buffer">
+//use valid javascript and procedures below, then click 'RUN'
+//eg:
+HIDE_TURTLE();//speedup rendering
+REPEAT(50, function(){
+    SET_LINE(RANDOM_COLOR());
+    RANDOM_MOVE_IN_BOX(RAND(-10,10), RAND(-10, 10), RAND(-90, 90), RAND(-90, 90));
+});
+
+/* PROCEDURES...
+
+FORWARD(len);
+BACK(len);
+RIGHT(angle);
+LEFT(angle);
+REPEAT(times, fn, args);
+PENDOWN();
+PENUP();
+HIDE_TURTLE();
+SHOW_TURTLE();
+RESET();
+SQUAREPIECE(size);
+SQUARE(size);
+RECTANGLE(side1, side2);
+TRIANGLE(size);
+HOUSE(size);
+THING();
+CIRCLE(size);
+ARCR(r, deg);
+ARCL(r, deg);
+PETAL(size);
+FLOWER(size);
+RAY(r);
+SUN(size);
+POLY(side, angle);
+NEWPOLY(side, angle);
+POLYSPI(side, angle, inc);
+MULTISPI(side, angle, factor, iter);
+INSPI(side, angle, inc, iter);
+SUBSPIRO(side, angle, max);
+SPIRO(side, angle, max);
+SUBGSPIRO(side, angle, max, list);
+GSPIRO(side, angle, max, list);
+RAND(min, max);
+RANDOM_MOVE(d1, d2, a1, a2, times);
+RANDOM_MOVE_IN_BOX(d1, d2, a1, a2, times);
+SET_BG(color);
+SET_LINE(color);
+BEGIN_FILL(color);
+END_FILL();
+SET_FOOD(x, y);
+SMELL();
+ANIMATE(fn, max);
+STOP_ANIM();
+FIND_BY_SMELL1();
+FIND_BY_SMELL2(TURN);
+
+SOURCE: http://github.com/bigfish/turtle
+*/</textarea><br><input type="button" value="RUN" onclick="RUN()"/><input type="button" value="CLEAR SCREEN" onclick="RESET()"/><p id="feedback" ></p></form></td></tr></table><script src="js/turtle_explorer.js"></script></body></html>
